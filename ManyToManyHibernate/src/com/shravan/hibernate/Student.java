@@ -40,6 +40,10 @@ public class Student {
 	@JoinTable(name = "STUDENT_STUDENT_CERTIFICATION", joinColumns = { @JoinColumn(name = "Student_id") }, inverseJoinColumns = { @JoinColumn(name = "certification_id") })
 	private Set<StudentCertification> studentCertification = new HashSet<StudentCertification>(0);
 	
+	// @JoinTable annotation is something I looked up in the internet. It is used for mapping two tables 
+	// in this manyTomany mapping. The table name and the ID columns from both the participating tables 
+	// are mentioned 
+	
 	public Set<StudentCertification> getStudentCertification() {
 		return studentCertification;
 	}
